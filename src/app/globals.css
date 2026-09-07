@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+
+  --paper: #ffffff;
+  --wash: #eef1f3;
+  --wash-deep: #e3e8ec;
+  --ink: #14213d;
+  --ink-soft: #3d4a66;
+  --muted: #6b7688;
+  --rule: #c9d2da;
+  --rule-strong: #14213d;
+
+  /* Bangladesh green: the one accent, reserved for converted Bangla and the primary action. */
+  --green: #006a4e;
+  --green-deep: #00543e;
+  --green-wash: #e6f1ed;
+  --red: #c8102e;
+  --red-wash: #fbeaed;
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-wash: var(--wash);
+  --color-wash-deep: var(--wash-deep);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-muted: var(--muted);
+  --color-rule: var(--rule);
+  --color-green: var(--green);
+  --color-green-deep: var(--green-deep);
+  --color-green-wash: var(--green-wash);
+  --color-red: var(--red);
+  --color-red-wash: var(--red-wash);
+
+  --font-sans: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-mono-face), ui-monospace, "SF Mono", monospace;
+  --font-bangla: var(--font-bangla-face), "Nikosh", "Kalpurush", "SolaimanLipi", sans-serif;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  The matra — the headstroke that runs across the top of Bengali words and hangs
+  the letters beneath it. Every section here is hung from one instead of boxed in.
+*/
+.matra {
+  border-top: 1.5px solid var(--rule-strong);
+}
+
+.matra-thin {
+  border-top: 1px solid var(--rule);
+}
+
+.bangla {
+  font-family: var(--font-bangla);
+  font-feature-settings: "kern" 1, "liga" 1;
+  line-height: 1.75;
+}
+
+.mojibake {
+  font-family: var(--font-mono);
+  font-variant-ligatures: none;
+  letter-spacing: -0.01em;
+}
+
+/* Headline: Archivo's tightest, widest setting, used once. */
+.display {
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 0.98;
+  font-stretch: 112%;
+}
+
+:where(a, button, input, select, textarea, [tabindex]):focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+::selection {
+  background: var(--green);
+  color: #fff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
