@@ -42,4 +42,8 @@ next-env.d.ts
 
 # test build output
 .test-build/
-ksm/*
+
+# private sample data — real ledgers, never publish
+/ksm/
+*.xls
+*.xlsx

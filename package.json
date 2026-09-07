@@ -1,5 +1,5 @@
 {
-  "name": "bijoy-unicode-converter",
+  "name": "bijoy-unicode-xlsx-converter",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -26,5 +26,20 @@
     "tailwindcss": "^4",
     "typescript": "^5"
   },
-  "description": "Convert Bijoy/SutonnyMJ Bangla spreadsheets to Unicode, in the browser."
+  "description": "Convert Bijoy/SutonnyMJ Bangla spreadsheets to Unicode in the browser.",
+  "license": "AGPL-3.0-or-later",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mubin986/bijoy-unicode-xlsx-converter.git"
+  },
+  "keywords": [
+    "bangla",
+    "bengali",
+    "bijoy",
+    "sutonnymj",
+    "unicode",
+    "avro",
+    "xlsx",
+    "converter"
+  ]
 }
